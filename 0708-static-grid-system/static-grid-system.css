@@ -6,3 +6,16 @@ html {
 	font-family: 'Spoqa Han Sans', sans-serif;
 	font-weight: 400;
 }
+
+/* typography */
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 3.2rem;
+	line-height: 4.5rem;
+}
+
+p { font-weight: 200; margin-top: 1.5rem; margin-bottom: 3rem; }
+
+h1, p { text-align: center; color: #121212; }
