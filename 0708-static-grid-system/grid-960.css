@@ -1,11 +1,18 @@
-/*
- * ----------------------------------------------------------
- * stylesheet for static grid system
- * ----------------------------------------------------------
-*/
-body {
-	background: #51FFE1;
+@charset "utf-8";
+
+html {
+	font-size: 1rem;
+	line-height: 1.5;
+	font-family: 'Spoqa Han Sans', sans-serif;
+	font-weight: 400;
 }
+
+body {
+	background: #2ecc71;
+}
+
+
+/* 가이드라인 */
 
 .overlay-grid {
 	position: relative;
@@ -16,7 +23,7 @@ body {
 	display: block;
 	width: 960px;
 	min-height: 100%;
-	background-image: linear-gradient(to right, transparent 20%, rgba(42,58,255,0.2) 20%, rgba(42,58,255,0.2) 80%, transparent 80%), linear-gradient(180deg, transparent 97%, #1400FF 97%);
+	background-image: linear-gradient(to right, transparent 20%, rgba(52,73,94,0.3) 20%, rgba(52,73,94,0.3) 80%, transparent 80%), linear-gradient(180deg, transparent 97%, #2c3e50 97%);
 	background-size: 80px 1px, 1px 24px;
 	background-repeat: repeat;
 	position: absolute;
@@ -24,7 +31,9 @@ body {
 	left: 0;
 }
 
+
 /* 화면 폭 지정 및 가운데 배치 모듈 */
+
 .container {
 	width: 960px;
 	margin-left: auto;
@@ -32,7 +41,9 @@ body {
 	padding: 3rem 0;
 }
 
+
 /* ROW Module | 행을 잡아주는 클래스 */
+
 .row:after, .row::after {
 	content: '';
 	display: block;
@@ -43,7 +54,9 @@ body {
 	margin-bottom: 1.5rem;
 }
 
+
 /* COLUMN Module | 열을 만들어주는 클래스 */
+
 [class*="col-"] {
 	float: left;
 	margin-left: 16px;
@@ -74,3 +87,15 @@ body {
 .col-11 { width: 848px; }
 .col-12 { width: 928px; }
 
+/* typography */
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	font-size: 3.2rem;
+	line-height: 4.5rem;
+}
+
+p { font-weight: 200; margin-top: 1.5rem; margin-bottom: 3rem; }
+
+h1, p { text-align: center; color: #121212; }
