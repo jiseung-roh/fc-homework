@@ -21,7 +21,7 @@ body { background: #FC3B44;}
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: linear-gradient(180deg, transparent 97%, #2c3e50 97%), linear-gradient(to right, transparent 10%, rgba(52,73,94,0.3) 10%, rgba(52,73,94,0.3) 90%);
+	background-image: linear-gradient(180deg, transparent 97%, #2c3e50 97%), linear-gradient(to right, transparent 10%, rgba(52,73,94,0.3) 10%, rgba(52,73,94,0.3) 90%, transparent 90%);
 	background-size: 1px 1.5rem, 90px 1px;
 }
 
