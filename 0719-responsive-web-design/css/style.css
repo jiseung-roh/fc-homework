@@ -1,0 +1,30 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Stylesheet
+ * ----------------------------------------------------------------------------
+ */
+
+.page-header,
+.step {
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.page-header > div { min-height: calc(100vh - 6rem); }
+
+.step:nth-of-type(odd) { background-color: #efefef; }
+
+
+p { margin-bottom: 1.5rem; }
+h1 + p { margin-top: 3rem; }
+h2 + p { margin-top: 1.5rem; }
+.meta { margin-bottom: 4.5rem; }
+.meta:first-of-type { float: left; }
+.meta:last-of-type { float: right; }
+
+.rwd-figure,
+.rwd-figure-caption,
+.rwd-figure-img { width: 100%; }
+.rwd-figure-img { height: auto; }
+
+.code-group { white-space: pre-wrap; }
