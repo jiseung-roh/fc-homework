@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-KR" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>RWD | Responsive Web Design Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata%7CKarla" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/ress.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="page-header clearfix">
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12">
+			<div class="pos-center">
+				<div class="clearfix">
+					<p class="meta">July 20th, 2016 — Sunny</p>
+					<p class="meta">— Jiseung Roh</p>
+				</div>
+				<h1 class="title">Responsive Web Design<br>Step by Step Guideline</h1>
+				<p>
+					Responsive Web Design — a.k.a. RWD — plays crucial role in modern website in terms of N Screen compatibility. Below is a simple guide to develop basic RWD via <a href="#fluid-grid" class="page-link">fluid grid</a>, <a href="#flex-img-video" class="page-link">flexible image &amp; video</a> and <a href="#media-query" class="page-link">media query.</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- // page-header -->
+
+	<!-- step-1 -->
+	<section class="step clearfix">
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12">
+			<h2>Step 1.<br>Choose the breakpoint.</h2>
+			<p>
+				First of all, we need to decide in which size of the website design will play as a breakpoint of different web design. Google has provided <a href="https://material.google.com/layout/responsive-ui.html" class="outer-link">excellent reference</a> that shows the width size of breakpoints for each devices and and how many columns are desirable accordingly.
+			</p>
+			<p>
+				The breakpoint that I personally prefer is 600px and 960px. Width value under 600px is for mobile view, value in between 601px and 960px for tablet view and value over 961px for desktop view. Sometimes I add another breakpoint at 1200px for wide screen users.
+			</p>
+			<figure class="rwd-figure">
+				<img class="rwd-figure-img" src="https://material-design.storage.googleapis.com/publish/material_v_8/material_ext_publish/0B8olV15J7abPSGFxemFiQVRtb1k/layout_adaptive_breakpoints_01.png" width="2320" height="1024" alt>
+				<figcaption class="rwd-figure-caption">Google's breakpoint guidelines for multi-screen optimization</figcaption>
+			</figure>
+		</div>
+	</section>
+	<!-- // step-1 -->
+
+	<!-- step-2 -->
+	<section class="step clearfix">
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12">
+			<h2 id="fluid-grid">Step 2.<br>Build a fluid grid system.</h2>
+			<p>
+				After you decide on which point the website will break, you have to build a fluid grid system accordingly. What's important here is that it is much more efficient to <em>design mobile first</em> and other devices later. The screen size of the mobile is small so that the website should have compact and core content inside. It is more recommended to add other elements that doesn't play a crucial role a content in respect of the viewport size. This way of approach is called <em>"Progressive Enhancement".</em>
+			</p>
+			<p>
+				Building a fluid grid system is extremely simple. All you need to do is to set the width value using percentage(%) instead of fixed value like pixel or em/rem.
+			</p>
+			<p>Let's make a grid system for mobile view first. I will use 4 columns.</p>
+			<div class="code-group">
+<pre>
+<span class="code--comment">/* module to clear the float properties. */</span>
+.row:after, .row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+<span class="code--comment">/* Float the grid items */</span>
+[class*="col-1"] {
+  float: left;
+}
+<span class="code--comment">/* 4 Columns, 's' indicates it's for mobile view */</span>
+.col-s-1-4 { width: 25%; }
+.col-s-2-4 { width: 50%; }
+.col-s-3-4 { width: 75%; }
+.col-s-4-4 { width: 100%; }
+</pre>
+			</div>
+			<p>I will finish making the grid system. I am going to use 8 columns for tablet view and 12 for desktops.</p>
+			<div class="code-group">
+<pre>
+<span class="code--comment">/* 8 Columns, 'm' for tablet view */</span>
+.col-m-1-8 { width: 12.5%; }
+.col-m-2-8 { width: 25%; }
+.col-m-5-8 { width: 37.5%; }
+.col-m-4-8 { width: 50%; }
+.col-m-5-8 { width: 62.5%; }
+.col-m-6-8 { width: 75%; }
+.col-m-7-8 { width: 87.5%; }
+.col-m-8-8 { width: 100%; }
+
+<span class="code--comment">/* 12 Columns, 'l' for tablet view */</span>
+.col-l-1-12 { width: 8.33333%; }
+.col-l-2-12 { width: 16.66666%; }
+.col-l-3-12 { width: 25%; }
+.col-l-4-12 { width: 33.33333%; }
+.col-l-5-12 { width: 41.66666%; }
+.col-l-6-12 { width: 50%; }
+.col-l-7-12 { width: 58.33333%; }
+.col-l-8-12 { width: 66.66666%; }
+.col-l-9-12 { width: 75%; }
+.col-l-10-12 { width: 83.33333%; }
+.col-l-11-12 { width: 91.66666%; }
+.col-l-12-12 { width: 100%; }
+</pre>
+			</div>
+		</div>
+	</section>
+	<!-- // step-2 -->
+
+	<!-- step 3 -->
+	<section class="step clearfix">
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12">
+			<h2>Step 3.<br>Set the class value to HTML element.</h2>
+			<p>
+				Lastly, you have to set media query value to make your fluid grid work. In order to do so, you have to set the grid class to the HTML element. But first, you need to add &lt;meta&gt; tag in &lt;head&gt; to optimize viewport size.
+			</p>
+			<div class="code-group">
+<pre>
+&lt;head&gt;
+  &lt;title&gt;Title of your website&lt;/title&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+</pre>
+			</div>
+			<p>Now you are really prepared to make your site responsive to the viewport size. Let's say you want 1 column-only design for mobile, 1 column in header and 2 columns in main for tablet, and 3 even columns for desktop view.</p>
+			<figure class="rwd-figure">
+				<img class="rwd-figure-img" src="">
+				<figcaption class="rwd-figure-caption">Mobile : 1 Column Design</figcaption>
+			</figure>
+			<p>
+				The mobile display uses 1 column only, meaning the width value of the element is 100%. The HTML markup would be like this:
+			</p>
+			<div class="code-group">
+<pre>
+&lt;div class="row"&gt;
+  &lt;header class="box-1 col-s-4-4"&gt;&lt;header&gt;
+  &lt;section class="box-1 col-s-4-4"&gt;&lt;section&gt;
+  &lt;section class="box-1 col-s-4-4"&gt;&lt;section&gt;
+&lt;/div&gt;
+</pre>
+			</div>
+			<p>
+				The tablet display is a little bit more complex than the mobile version but there is nothing difficult. The header takes up 100% width value and others take 50% each.
+			</p>
+			<figure class="rwd-figure">
+				<img class="rwd-figure-img" src="">
+				<figcaption class="rwd-figure-caption">Tablet : 1 Column Header and 2 Columns Main</figcaption>
+				</figure>
+			<div class="code-group">
+<pre>
+&lt;div class="row"&gt;
+  &lt;header class="box-1 col-s-4-4 col-m-8-8"&gt;&lt;header&gt;
+  &lt;section class="box-1 col-s-4-4 col-m-4-8"&gt;&lt;section&gt;
+  &lt;section class="box-1 col-s-4-4 col-m-4-8"&gt;&lt;section&gt;
+&lt;/div&gt;
+</pre>
+			</div>
+			<p>
+				All blocks share same width value, 33.3333%.
+			</p>
+			<figure class="rwd-figure">
+				<figcaption class="rwd-figure-caption">Desktop : 3 Column Design</figcaption>
+				<img class="rwd-figure-img" src="">
+			</figure>
+
+			<div class="code-group">
+<pre>
+&lt;div class="row"&gt;
+  &lt;header class="box-1 col-s-4-4 col-m-8-8 col-l-4-12"&gt;&lt;header&gt;
+  &lt;section class="box-1 col-s-4-4 col-m-4-8 col-l-4-12"&gt;&lt;section&gt;
+  &lt;section class="box-1 col-s-4-4 col-m-4-8 col-l-4-12"&gt;&lt;section&gt;
+&lt;/div&gt;
+</pre>
+			</div>
+		</div>
+	</section>
+	<!-- // step-3 -->
+
+	<!-- step-4 -->
+	<section class="step clearfix">
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12">
+			<h2 id="media-query">Step 4.<br>Set media query.</h2>
+		</div>
+	</section>
+</body>
+</html>
