@@ -36,7 +36,4 @@ h2 + p { margin-top: 1.5rem; }
 .rwd-figure-img { width: 100%; }
 .rwd-figure-img { height: auto; }
 
-.code-group {
-  margin-top: -1.5rem;
-  white-space: pre-wrap;
-}
+.code-group { white-space: pre-wrap; }
