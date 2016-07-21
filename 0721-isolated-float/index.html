@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-KR" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>Isolated Float | Fix Subpixel Rendering Error</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata%7CKarla" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/ress.css">
+	<link rel="stylesheet" type="text/css" href="css/type.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="page-header gutter clearfix">
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12">
+			<div class="pos-center">
+				<div class="clearfix">
+					<p class="meta highlight">July 21th, 2016 — Sunny</p>
+					<p class="meta">002.<br>— Jiseung Roh</p>
+				</div>
+				<h1 class="title">Isolated Float:<br>Preventing<br>Subpixel Rendering Error</h1>
+				<p>
+					Giving the width value with percentage unit, which is called "fluid grid system", is the key of responsive websites. However, each browser calculates percentage differently — causing subpixel rendering error. Some browers round off decimal points and others do opposite, ended up making one pixel difference. This minor difference wouldn't do so much harm in your daily life but it can be detrimental when it comes to responsive website, elements overflewed by one pixel causing the last child element to break the line. In order to fix this problem, some frontend dev gurus have discovered a solution that prevents rendering mistakes, and also allow developers to switch the order of the source item without disturbing normal flow. 
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- // page-header -->
+
+	<!-- step-1 -->
+	<section class="step gutter clearfix">
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12 clearfix">
+			<div class="float-item"><span class="center">Box 1</span></div>
+			<div class="float-item"><span class="center">Box 2</span></div>
+			<div class="float-item"><span class="center">Box 3</span></div>
+			<div class="float-item"><span class="center">Box 4</span></div>
+		</div>
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12 clearfix mrt">
+			<div class="isolate float-item"><span class="center">Box 1</span></div>
+			<div class="isolate float-item"><span class="center">Box 2</span></div>
+			<div class="isolate float-item"><span class="center">Box 3</span></div>
+			<div class="isolate float-item"><span class="center">Box 4</span></div>
+		</div>
+		<div class="col-s-4-4 col-m-6-8 col-l-8-12 push-m-1-8 push-l-2-12 clearfix mrt">
+			<div class="isolate order-3 float-item"><span class="center">Box 1</span></div>
+			<div class="isolate order-1 float-item"><span class="center">Box 2</span></div>
+			<div class="isolate order-2 float-item"><span class="center">Box 3</span></div>
+			<div class="isolate order-0 float-item"><span class="center">Box 4</span></div>
+		</div>
+	</section>
+</body>
+</html>
