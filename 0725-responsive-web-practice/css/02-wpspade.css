@@ -1,0 +1,216 @@
+.pg-header .gnb a, .pg-header .intro, .pg-footer {
+  font-family: 'Lato',sans-serif;
+}
+
+.clearfix:after, .clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@media screen and (min-width: 1081px) {
+  .lg-clearfix:after, .lg-clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.lg-col-1 {
+  width: 100%;
+  float: left;
+}
+
+@media screen and (min-width: 1081px) {
+  .lg-col-1 {
+    width: 33.33333%;
+  }
+}
+
+.lg-col-2 {
+  width: 100%;
+  float: left;
+}
+
+@media screen and (min-width: 1081px) {
+  .lg-col-2 {
+    width: 66.66667%;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1080px) {
+  .md-col-1 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1080px) {
+  .md-col-2 {
+    width: 100%;
+  }
+}
+
+.pg-header {
+  width: 100%;
+  height: 90vh;
+  padding: 50px;
+  background-image: url(http://wpspade.com/vong/wp-content/uploads/sites/7/2015/12/blue-eyes-237438_1920-slide.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pg-header .logo {
+  float: left;
+}
+
+.pg-header .logo img {
+  width: 67px;
+  height: auto;
+}
+
+.pg-header .gnb {
+  float: right;
+}
+
+.pg-header .gnb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pg-header .intro {
+  padding-top: 20vh;
+  padding-left: 5%;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.article-four-three {
+  padding-top: 35px;
+  padding-left: 37px;
+  padding-bottom: calc(75% - 53.7px);
+  position: relative;
+  overflow: hidden;
+}
+
+.article-two-three {
+  padding-top: 35px;
+  padding-left: 37px;
+  padding-bottom: calc(150% - 53.7px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hit-area {
+  display: block;
+  width: 100%;
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.hit-area:hover .rwd-image {
+  top: 80px;
+  left: 40px;
+}
+
+.hit-area:hover h3 {
+  padding-left: 20px;
+}
+
+.hit-area:hover h3:before, .hit-area:hover h3::before {
+  width: 17px;
+}
+
+.article h3 {
+  position: relative;
+  padding-left: 0px;
+  font-family: 'Lato';
+  font-size: 17px;
+  line-height: 1.1;
+  transition: all .2s ease-in;
+}
+
+.article h3:before, .article h3::before {
+  content: '';
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: -2px;
+  width: 0px;
+  height: 3px;
+  background-color: #999;
+  transition: all .2s ease-in;
+}
+
+.rwd-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: all .2s ease-in;
+}
+
+.pg-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.pg-footer > *:not(:last-child) {
+  margin-right: 10%;
+}
+
+.pg-footer p {
+  line-height: 1.5;
+  text-align: center;
+}
+
+.pg-footer .sns-link a {
+  float: left;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #2b2b2b;
+}
+
+.pg-footer .sns-link a:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .pg-footer {
+    position: relative;
+    display: block;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  .pg-footer img {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .pg-footer .sns-link {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .pg-footer p {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*# sourceMappingURL=../map/02-wpspade.css.map */

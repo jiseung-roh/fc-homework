@@ -1,0 +1,188 @@
+// 02-WPSPADE.SASS
+// Responsive Website
+// Breakpoints: 1080px, 800px
+// 3 Column -> 2 Column -> 1 Column
+
+%rwd-image
+	width: 100%
+	height: auto
+
+@mixin lg-col($col)
+	float: left
+	@media screen and (min-width: 1081px)
+		width: percentage($col/3)
+
+@mixin md-col($col)
+	@media screen and (min-width: 801px) and (max-width: 1080px)
+		width: percentage($col/2)
+
+@mixin four-three
+	padding:
+		top: 35px
+		left: 37px
+		bottom: calc(75% - 53.7px)
+@mixin two-three
+	padding:
+		top: 35px
+		left: 37px
+		bottom: calc(150% - 53.7px)
+
+%lato
+	font-family: 'Lato',sans-serif
+
+.clearfix:after, .clearfix::after
+	content: ''
+	display: block
+	clear: both
+
+.lg-clearfix
+	@media screen and (min-width: 1081px)
+		&:after, &::after
+			content: ''
+			display: block
+			clear: both
+
+.lg-col-1
+	width: 100%
+	@include lg-col(1)
+.lg-col-2
+	width: 100%
+	@include lg-col(2)
+.md-col-1
+	@include md-col(1)
+.md-col-2
+	@include md-col(2)
+
+
+.pg-header
+	width: 100%
+	height: 90vh
+	padding: 50px
+	background:
+		image: url(http://wpspade.com/vong/wp-content/uploads/sites/7/2015/12/blue-eyes-237438_1920-slide.jpg)
+		repeat: no-repeat
+		size: cover
+		position: center
+	.logo
+		float: left
+		img
+			width: 67px
+			height: auto
+	.gnb
+		float: right
+		a
+			@extend %lato
+			color: #fff
+			text-decoration: none
+	.intro
+		padding:
+			top: 20vh
+			left: 5%
+		@extend %lato
+		font-size: 2.5rem
+		line-height: 1.25
+		color: #fff
+
+
+
+.article-four-three
+	@include four-three
+	position: relative
+	overflow: hidden
+
+.article-two-three
+	@include two-three
+	position: relative
+	overflow: hidden
+
+.hit-area
+	display: block
+	width: 100%
+	color: #2b2b2b
+	text-decoration: none
+	&:hover
+		.rwd-image
+			top: 80px
+			left: 40px
+		h3
+			padding-left: 20px
+		h3:before, h3::before
+			width: 17px
+
+.article
+	h3
+		position: relative
+		padding-left: 0px
+		font:
+			family: 'Lato'
+			size: 17px
+		line-height: 1.1
+		transition: all .2s ease-in
+		&:before, &::before
+			content: ''
+			position: absolute
+			transform: translateY(-50%)
+			top: 50%
+			left: -2px
+			width: 0px
+			height: 3px
+			background-color: #999
+			transition: all .2s ease-in
+
+.rwd-image
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: auto
+	transition: all .2s ease-in
+
+
+.pg-footer
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	align-items: center
+	width: 100%
+	padding:
+		top: 90px
+		bottom: 90px
+	@extend %lato
+	>*:not(:last-child)
+		margin-right: 10%
+	p
+		line-height: 1.5
+		text-align: center
+	.sns-link
+		a
+			float: left
+			margin-right: 1rem
+			text-decoration: none
+			color: #2b2b2b
+			&:last-child
+				margin-right: 0
+	@media screen and (max-width: 800px)
+		position: relative
+		display: block
+		padding:
+			top: 120px
+			bottom: 120px
+		text-align: center
+		font-size: 0.75rem
+		img
+			width: 60px
+			height: auto
+			position: absolute
+			top: 30%
+			left: 50%
+			transform: translate(-50%,-50%)
+		.sns-link
+			position: absolute
+			top: 55%
+			left: 50%
+			transform: translate(-50%,-50%)
+		p
+			position: absolute
+			top: 80%
+			left: 50%
+			transform: translate(-50%,-50%)
