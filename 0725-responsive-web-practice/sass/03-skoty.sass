@@ -1,0 +1,317 @@
+// Grid System
+$main-color: #42d18c
+$post-date: #bebfc9
+$body-text: #474851
+$light-grey: #e8e8e8
+$dark-grey: #31323a
+
+//  Type
+%open-sans
+	font:
+		family: 'Open Sans', sans-serif
+		size: 1rem
+		weight: 400
+	line-height: 1.5
+	text-decoration: none
+
+html
+	@extend %open-sans
+	color: $body-text
+
+
+@mixin container
+	width: 90%
+	margin:
+		left: auto
+		right: auto
+	@media screen and (min-width: 1110px)
+		width: 1020px
+
+@mixin col($col)
+	float: left
+	padding:
+		left: 10px
+		right: 10px
+	@media screen and (min-width: 640px)
+		width: percentage($col/12)
+@mixin mb-col($col)
+	@media screen and (max-width: 639px)
+		width: percentage($col/4)
+
+@mixin push($col)
+	position: relative
+	@media screen and (min-width: 640px)
+		left: percentage($col/12)
+
+.clearfix:after, .clearfix::after
+	content: ''
+	display: block
+	clear: both
+
+.readable-hidden
+	position: absolute
+	top: 0
+	left: 0
+	width: 1px
+	height: 1px
+	overflow: hidden
+	visibility: hidden
+
+.container
+	@include container
+
+.col-12
+	@include col(12)
+	@include mb-col(4)
+
+.col-3
+	@include col(3)
+	@include mb-col(4)
+.col-4
+	@include col(4)
+	@include mb-col(4)
+.push-2
+	@include push(2)
+
+
+
+
+// page-header 영역을 딱! 잡아주기 
+.page-header
+	position: relative
+	width: 100%
+	height: 100vh
+	padding:
+		top: 95px
+	background:
+		color: $main-color
+		image: url(../asset/skoty-header.jpg)
+		repeat: no-repeat
+		size: cover
+		attachment: fixed
+		position: center center
+	.header-header
+		.logo
+			float: left
+			a
+				display: block
+				img
+					width: 85px
+					height: auto
+					line-height: 42px
+		.button-group
+			float: right
+			.icon-button
+				float: left
+				padding: 7px
+				font-size: 21px
+				line-height: 28px
+				color: #fff
+				text-decoration: none
+				opacity: 1
+				transition: opacity .2s ease-in
+				&:hover
+					opacith: .5
+	.intro
+		@extend %open-sans
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		text-align: center
+		.main-intro
+			padding:
+				bottom: 28px
+			font:
+				size: 36px
+				weight: 600
+			line-height: 56px
+			letter-spacing: -3px
+			color: #fff
+			@media screen and (min-width: 640px)
+				font-size: 56px
+				letter-spacing: -1px
+		.sub-intro
+			font-size: 18px
+			line-height: 28px
+			color: #e8e8e8
+		.flat-button
+			@extend %open-sans
+			display: inline-block
+			padding: .875em 1.5em
+			border-radius: 4px
+			margin-top: 56px
+			font-size: 1em
+			line-height: 1em
+			color: #fff
+			background-color: $main-color
+			&:hover
+				background-color: darken($main-color, 5%)
+			&:active
+				background-color: darken($main-color, 10%)
+
+
+//  page-main post box
+.blog
+	padding:
+		top: 56px
+		bottom: 56px
+	column-count: 3
+	@media screen and (min-width: 641px) and (max-width: 840px)
+		column-count: 2
+	@media screen and (max-width: 640px)
+		column-count: 1
+
+.blog-post-box
+	margin:
+		left: 5%
+		right: 5%
+		bottom: 56px
+	overflow: hidden
+	&.green
+	a
+		display: block
+		width: 100%
+		padding: 42px 28px
+		line-height: 28px
+		text-align: center
+		text-decoration: none
+		color: $body-text
+		background-color: #efefef
+	&.green a
+		padding: 64px 28px
+		color: #fff
+		text-decoration: underline
+		background-color: $main-color
+		.post-title
+			margin-bottom: 42px
+			font:
+				size: 20px
+				weight: 600
+		.post-description
+			font:
+				size: 18px
+				weight: 400
+				style: italic
+
+.blog-post
+	display: inline-block
+	margin:
+		left: 5%
+		right: 5%
+		bottom: 56px
+	> a
+		display: block
+		width: 100%
+		.post-image
+			width: 100%
+			height: auto
+			margin-bottom: 28px
+	.rwd-media
+		position: relative
+		width: 100%
+		height: 0
+		margin-bottom: 28px
+		&.aspect-4
+			padding-bottom: 75%
+		&.aspect-16
+			padding-bottom: 56.25%
+		&.aspect-21
+			padding-bottom: 42.857142857%
+		.post-media
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	.rwd-media-original
+		width: 100%
+		height: auto
+		margin-bottom: 28px
+
+	.post-date
+		font:
+			size: 14px
+			weight: 600
+		line-height: 28px
+		.fa
+			margin-right: 3px
+	.post-title 
+		padding:
+			top: 14px
+			bottom: 14px
+		a
+			font:
+				size: 24px
+				weight: 400
+			line-height: 28px
+			color: $body-text
+			text-decoration: none
+	.post-description
+		font:
+			size: 1rem
+		line-height: 28px
+		.link-more
+			padding: 2px 4px
+			border-radius: 4px
+			font:
+				size: inherit
+				weight: inherit
+			color: $main-color
+			text-decoration: none
+			transition: all .2s ease-in
+			&:hover
+				background-color: $main-color
+				color: #fff
+
+.statistics
+	padding:
+		top: 84px
+		bottom: 42px
+	background-color: $body-text
+	.statistics-item
+		padding-top: 28px
+		margin-bottom: 42px
+		text-align: center
+		.num
+			margin-bottom: 28px
+			font-size: 36px
+			line-height: 42px
+			color: $light-grey
+		.field
+			margin-bottom: 28px
+			font:
+				size: 16px
+				weight: 300
+			line-height: 28px
+			color: #fff
+
+
+.etc
+	padding:
+		top: 112px
+		bottom: 84px
+	line-height: 28px
+	color: #fff
+	background-color: $dark-grey
+	@media screen and (max-width: 640px)
+		text-align: center
+	.etc-item
+		margin-bottom: 56px
+		h4
+			margin-bottom: 28px
+		ul
+			list-style-type: none
+			padding: 0
+		a
+			color: #fff
+			text-decoration: none
+			&:hover
+				color: $main-color
+		&:last-child ul li
+			margin-bottom: 14px
+			&:last-child
+				margin-bottom: 0
+
+
+
