@@ -1,0 +1,125 @@
+.work-item a {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .pg-main, .pg-sub {
+    float: left;
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .clearfix:after, .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.brand a, .gnb a {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 15px;
+}
+
+.work-item a {
+  font-family: "Playfair Display";
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.brand, .gnb, .work-item a {
+  text-align: center;
+}
+
+.pg-main {
+  background-color: #fafafa;
+}
+
+.brand a:first-child, .gnb a:first-child {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.brand a:first-child:hover, .gnb a:first-child:hover, .brand a:first-child:focus, .gnb a:first-child:focus {
+  color: #999;
+}
+
+.brand a:last-child, .gnb a:last-child {
+  text-decoration: none;
+  color: #999;
+}
+
+.brand a:last-child:hover, .gnb a:last-child:hover, .brand a:last-child:focus, .gnb a:last-child:focus {
+  color: #1a1a1a;
+}
+
+.gnb {
+  background-color: #fff;
+}
+
+.gnb a:nth-child(2) {
+  text-decoration: none;
+  color: #999;
+}
+
+.gnb a:nth-child(2):hover, .gnb a:nth-child(2):focus {
+  color: #1a1a1a;
+}
+
+.work-item a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.work-item a:hover, .work-item a:focus {
+  color: #999;
+}
+
+.work-item:nth-child(even) a {
+  font-style: italic;
+}
+
+.work-item a {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .pg-main, .pg-sub {
+    float: left;
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .clearfix:after, .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.brand a, .gnb a {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 15px;
+}
+
+.work-item a {
+  font-family: "Playfair Display";
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.brand, .gnb, .work-item a {
+  text-align: center;
+}

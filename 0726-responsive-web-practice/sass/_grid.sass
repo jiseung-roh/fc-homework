@@ -1,0 +1,26 @@
+// Flex Item
+%flex-container
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	align-items: center
+
+// Display Block
+%dis-block
+	display: block
+	width: 100%
+
+// lg-screen
+%lg-screen
+	@media screen and (min-width: 1024px)
+		float: left
+		position: relative
+		width: 50vw
+		height: 100vh
+
+%lg-screen-clearfix
+	@media screen and (min-width: 1024px)
+		&:after, &::after
+			content: ''
+			display: block
+			clear: both

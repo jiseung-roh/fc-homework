@@ -1,0 +1,32 @@
+// Type
+$body-text-color: rgb(26,26,26)
+$point-text-color: #999
+$sans-serif: 'Roboto'
+$serif: 'Playfair Display'
+
+%body-text
+	font:
+		family: $sans-serif
+		size: 15px
+		weight: 300
+	line-height: 15px
+
+%display-text
+	font:
+		family: $serif
+		size: 40px
+	line-height: 46px
+
+%text-center
+	text-align: center
+
+@mixin anchor($text-color)
+	text-decoration: none
+	@if $text-color == $body-text-color
+		color: $body-text-color
+		&:hover, &:focus
+			color: $point-text-color
+	@else if $text-color == $point-text-color
+		color: $point-text-color
+		&:hover, &:focus
+			color: $body-text-color

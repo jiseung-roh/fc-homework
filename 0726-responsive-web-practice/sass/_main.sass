@@ -1,0 +1,32 @@
+@import _base.sass
+
+.clearfix
+	@extend %lg-screen-clearfix
+.pg-main
+	@extend %lg-screen
+	background-color: $body-bg-color
+// Type
+.brand
+	@extend %text-center
+	a
+		@extend %body-text
+		&:first-child
+			@include anchor($body-text-color)
+		&:last-child
+			@include anchor($point-text-color)
+
+.gnb
+	@extend .brand
+	background-color: $gnb-bg-color
+	a
+		&:nth-child(2)
+			@include anchor($point-text-color)
+
+.work-item
+	a
+		@extend %display-text, %dis-block, %text-center
+		@include anchor($body-text-color)
+	&:nth-child(even)
+		a
+			font-style: italic
+
