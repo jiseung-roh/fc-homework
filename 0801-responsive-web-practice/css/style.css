@@ -198,10 +198,27 @@ html {
   font-famliy: inherit;
   color: inherit;
   text-decoration: none;
+  position: relative;
+}
+
+@media screen and (min-width: 601px) {
+  .article-content {
+    width: 100%;
+    height: 0;
+    padding-bottom: 144.3349754%;
+  }
+}
+
+.article-content.img-article-content {
   width: 100%;
   height: 0;
-  padding-bottom: 144.3349754%;
-  position: relative;
+  padding-bottom: 100%;
+}
+
+.article-content.text-article-content {
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
 }
 
 .article-content:hover .img-article-content {
@@ -224,26 +241,21 @@ html {
   transition: all 0.2s ease-in;
 }
 
-.img-article-content .tag {
-  font-size: .9rem;
-  font-weight: 300;
+.tag {
+  font: 300 0.9rem/1.5 "Lato", sans-serif;
 }
 
-.img-article-content .tag span {
+.tag span {
   margin-right: .5rem;
   margin-bottom: .133333334rem;
 }
 
-.img-article-content .tag span:last-child {
+.tag span:last-child {
   margin-right: 0;
 }
 
-.img-article-content .img-article-title {
-  font-size: 1.7rem;
-  line-height: 1.7647058824;
-  font-family: "Droid Serif", serif;
-  font-weight: 400;
-  font-style: italic;
+.img-article-title {
+  font: 400 italic 1.7rem/1.7647058824 "Droid Serif", serif;
   color: #fff;
 }
 
@@ -256,6 +268,88 @@ html {
   width: 100%;
   height: auto;
   padding: 1rem 0 1.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .9em;
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .article-etc {
+    font-size: .86em;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  .article-etc {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .article-etc {
+    font-size: 12px;
+  }
+}
+
+.article-etc .date:after, .article-etc .date::after {
+  content: '/';
+  margin-left: .3em;
+  margin-right: .3em;
+}
+
+.article-etc .comment {
+  color: #25f1b0;
+}
+
+.article-outer-link {
+  display: inline-block;
+}
+
+.outer-link-items {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: baseline;
+  background-size: contain;
+  background-position: center center;
+}
+
+.outer-link-items:nth-child(1) {
+  background-image: url(../asset/icon-message.svg);
+  fill: #cacaca;
+}
+
+.outer-link-items:nth-child(2) {
+  background-image: url(../asset/icon-facebook.svg);
+}
+
+.outer-link-items:nth-child(3) {
+  background-image: url(../asset/icon-twitter.svg);
+  fill: #cacaca;
+}
+
+@media screen and (min-width: 601px) {
+  .text-article-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+}
+
+.text-article-content .tag {
+  color: #25f1b0;
+}
+
+.text-article-title {
+  font: italic 1.3rem/1.5 "Droid Serif", serif;
 }
 
 .pg-footer {

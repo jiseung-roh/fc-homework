@@ -60,6 +60,14 @@
 }
 
 .gnb {
+  position: absolute;
+  top: 0;
+  right: 90px;
+  width: 100vh;
+  height: 90px;
+  line-height: 90px;
+  transform-origin: 100% 0;
+  transform: rotate(-90deg) translate(0, -100%);
   background-color: #fff;
 }
 
