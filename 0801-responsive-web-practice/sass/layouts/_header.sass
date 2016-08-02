@@ -1,0 +1,80 @@
+// .pg-header design
+html
+	font:
+		family: $font-family-base
+		size: 14px
+		weight: 300
+	color: $body-text-color
+	+responsive($sm-screen)
+		font-size: 15px
+	+responsive($md-screen)
+		font-size: 16px
+
+.pg-header
+	+dimension(100%, auto, 15vh 0 10vh)
+	position: relative
+	+responsive($xs-screen)
+		padding:
+			left: 30px
+			right: 30px
+
+.container
+	width: 100%
+	margin:
+		left: auto
+		right: auto
+	+responsive($xs-screen)
+		width: 80%
+	+responsive($sm-screen)
+		width: 80%
+	+responsive($md-screen)
+		width: 70%
+	+responsive($lg-screen)
+		max-width: 1000px
+
+.brand
+	+margin-rhythm(1)
+	text-align: center
+	a
+		@extend %hit-area
+	img
+		display: inline-block
+		width: 100%
+		height: auto
+		vertical-align: middle
+		+responsive($sm-screen)
+			width: 80%
+		+responsive(600px)
+			width: 70%
+		+responsive($md-screen)
+			width: 50%
+		+responsive($lg-screen)
+			width: 50%
+
+.brand-slogan
+	@extend %text-default
+	font:
+		family: $font-family-head
+		weight: 300
+		style: italic
+	text-align: center
+
+.sns-group-list
+	+position-center-X
+	top: 24%
+.sns-items
+	@extend %hit-area
+	+horizontal-list(.75rem .5rem, 1rem)
+	width: 1rem
+	height: 1rem
+	background:
+		size: 100% 100%
+		position: center center
+	&:nth-child(1)
+		background-image: url(../asset/icon-dribbble.svg)
+	&:nth-child(2)
+		background-image: url(../asset/icon-linkedin.svg)
+	&:nth-child(3)
+		background-image: url(../asset/icon-instagram.svg)
+	&:nth-child(4)
+		background-image: url(../asset/icon-twitter.svg)

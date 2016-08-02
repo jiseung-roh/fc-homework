@@ -1,0 +1,61 @@
+.pg-main
+	+dimension(100%, auto, 15vh 0 10vh)
+	position: relative
+
+.article
+	+fluid-col(12, $float: true)
+	margin-bottom: 1.5rem
+	background-color: #fff
+	background-clip: content-box
+	+responsive($sm-screen)
+		+fluid-col(6, $gutter: $sm-gutter)
+	+responsive($md-screen)
+		+fluid-col(4, $gutter: $sm-gutter)
+	+responsive($lg-screen)
+		+fluid-col(3, $gutter: $lg-gutter)
+
+.article-content
+	@extend %hit-area
+	+reset-anchor
+	+dimension(100%, 0)
+	padding-bottom: 144.3349754%
+	position: relative
+	&:hover
+		.img-article-content
+			opacity: 1
+
+.img-article-content
+	+dimension(100%, 100%)
+	+flex-container(column)
+	position: absolute
+	top: 0
+	left: 0
+	color: #fff
+	background-color: $accent-color
+	opacity: 0
+	+transition
+	.tag
+		font:
+			size: .9rem
+			weight: 300
+		span 
+			margin:
+				right: .5rem
+				bottom: .133333334rem
+			&:last-child
+				margin-right: 0
+	.img-article-title
+		+vertical-rhythm(1, false)
+		font:
+			family: $font-family-head
+			weight: 400
+			style: italic
+		color: #fff
+
+
+.img-article-image 
+	+dimension(100%, auto)
+
+.article-etc
+	+dimension(100%, auto, 1rem 0 1.5rem)
+
