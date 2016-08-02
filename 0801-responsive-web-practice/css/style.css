@@ -1,0 +1,265 @@
+@import url(ress.css);
+.brand a, .sns-items, .article-content {
+  display: block;
+  width: 100%;
+}
+
+.brand-slogan {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #8f8f8f;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #8f8f8f;
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.pg-header {
+  width: 100%;
+  height: auto;
+  padding: 15vh 0 10vh;
+  position: relative;
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  .pg-header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.brand {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.brand img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .brand img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .brand img {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  .brand img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .brand img {
+    width: 50%;
+  }
+}
+
+.brand-slogan {
+  font-family: "Droid Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.sns-group-list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 24%;
+}
+
+.sns-items {
+  float: left;
+  padding: 0.75rem 0.5rem;
+  margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.sns-items:last-child {
+  margin-right: 0;
+}
+
+.sns-items:nth-child(1) {
+  background-image: url(../asset/icon-dribbble.svg);
+}
+
+.sns-items:nth-child(2) {
+  background-image: url(../asset/icon-linkedin.svg);
+}
+
+.sns-items:nth-child(3) {
+  background-image: url(../asset/icon-instagram.svg);
+}
+
+.sns-items:nth-child(4) {
+  background-image: url(../asset/icon-twitter.svg);
+}
+
+.pg-main {
+  width: 100%;
+  height: auto;
+  padding: 15vh 0 10vh;
+  position: relative;
+}
+
+.article {
+  float: left;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  background-clip: content-box;
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .article {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  .article {
+    width: 33.3333333333%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .article {
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.article-content {
+  font-famliy: inherit;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 0;
+  padding-bottom: 144.3349754%;
+  position: relative;
+}
+
+.article-content:hover .img-article-content {
+  opacity: 1;
+}
+
+.img-article-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: #25f1b0;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.img-article-content .tag {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+.img-article-content .tag span {
+  margin-right: .5rem;
+  margin-bottom: .133333334rem;
+}
+
+.img-article-content .tag span:last-child {
+  margin-right: 0;
+}
+
+.img-article-content .img-article-title {
+  font-size: 1.7rem;
+  line-height: 1.7647058824;
+  font-family: "Droid Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+}
+
+.img-article-image {
+  width: 100%;
+  height: auto;
+}
+
+.article-etc {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0 1.5rem;
+}
+
+.pg-footer {
+  position: relative;
+}
+
+/*# sourceMappingURL=../map/style.css.map */
