@@ -1,0 +1,44 @@
+@import "../config/configs.sass"
+
+%code-block
+	padding: 20px
+	border: 1px solid $code-block-border
+	font:
+		family: $code-font-family
+		size: 13px
+	line-height: 22px
+	color: $code-color-default
+	background-color: $code-block-bg-color
+
+%code-html
+	& .html-element
+		color: $code-color-1
+	& .html-attribute
+		color: $code-color-2
+	& .html-value
+		color: $code-color-3
+
+%code-css
+	& .css-property
+		color: $code-color-1
+	& .css-selector
+		color: $code-color-3
+	& .css-value
+		color: $code-color-2
+	& .css-pseudo
+		color: $code-color-4
+
+%code-sass
+	& .sass-script
+		color: $code-color-1
+	& .sass-operator
+		color: $code-color-2
+	& .sass-value
+		color: $code-color-3
+	& .sass-string
+		color: $code-color-4
+	& .sass-variable
+		color: $code-color-5
+
+	& .tab
+		padding: 0 1rem
