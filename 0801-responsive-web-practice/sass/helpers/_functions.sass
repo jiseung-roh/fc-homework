@@ -31,3 +31,6 @@
 	@if unitless($lh-base)
 		$lh-base: $lh-base * $fz-base
 	@return ceil($font-size/$lh-base) * ($lh-base/$font-size)
+
+@function font-shorthand($font-size: $font-size-base, $line-height: $line-height-base)
+	@return unquote("#{$font-size}/#{$line-height}")
