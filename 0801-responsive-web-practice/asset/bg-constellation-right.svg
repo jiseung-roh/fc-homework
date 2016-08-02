@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="903" height="1275" viewBox="0 0 903 1275">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.1;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #323232;
+      }
+
+      .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="bg-constellation-right.svg" class="cls-1">
+    <circle class="cls-2" cx="1725.5" cy="314.5" r="8.5"/>
+    <circle id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2" cx="1453.5" cy="625.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-2" cx="1831.5" cy="793.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_3" data-name="Ellipse 1 copy 3" class="cls-2" cx="2041.5" cy="479.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_4" data-name="Ellipse 1 copy 4" class="cls-2" cx="2230.5" cy="1123.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_5" data-name="Ellipse 1 copy 5" class="cls-2" cx="2129.5" cy="1266.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_6" data-name="Ellipse 1 copy 6" class="cls-2" cx="2239.5" cy="744.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_7" data-name="Ellipse 1 copy 7" class="cls-2" cx="2528.5" cy="322.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_8" data-name="Ellipse 1 copy 8" class="cls-2" cx="967.5" cy="736.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_9" data-name="Ellipse 1 copy 9" class="cls-2" cx="1129.5" cy="297.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_10" data-name="Ellipse 1 copy 10" class="cls-2" cx="1330.5" cy="1022.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_11" data-name="Ellipse 1 copy 11" class="cls-2" cx="630.5" cy="1071.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_12" data-name="Ellipse 1 copy 12" class="cls-2" cx="273.5" cy="761.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_13" data-name="Ellipse 1 copy 13" class="cls-2" cx="582.5" cy="496.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_14" data-name="Ellipse 1 copy 14" class="cls-2" cx="350.5" cy="513.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_15" data-name="Ellipse 1 copy 15" class="cls-2" cx="622.5" cy="218.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_16" data-name="Ellipse 1 copy 16" class="cls-2" cx="211.5" cy="235.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_17" data-name="Ellipse 1 copy 17" class="cls-2" cx="8.5" cy="736.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_19" data-name="Ellipse 1 copy 19" class="cls-2" cx="63.5" cy="45.5" r="8.5"/>
+    <circle id="Ellipse_1_copy_20" data-name="Ellipse 1 copy 20" class="cls-2" cx="950.5" cy="8.5" r="8.5"/>
+    <path class="cls-3" d="M2035.21,68.61l1.58-1.22,154,200-1.58,1.22Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2189.11,267.447l1.78-.894,138,276-1.78.894Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2329.08,546L2328.92,544l232-19,0.16,1.994Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2327.05,542.7l1.9,0.6-78,248-1.9-.6Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2250.1,791.005l-0.2,1.99-265-26,0.2-1.99Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2248.34,791.755l1.32-1.51,358,311.005-1.32,1.51Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2608.7,1100.71l-1.4-1.42,336-333,1.4,1.421Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2945.38,766.786l1.24-1.572,362,285-1.24,1.58Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2943.94,765.349l-1.88-.7,164-440,1.88,0.7Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M2563.99,527.132l-1.98-.263,37-279,1.98,0.262Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M3108.85,328.472l-1.7,1.056-181-291,1.7-1.056Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M4106.82,1295.58l-1.64-1.16,102-144,1.64,1.16Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M4207.64,1152.23l-1.28,1.54-399-332,1.28-1.538Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M3808.12,822.993l-0.24-1.986,409-49,0.24,1.986Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M4017.2,510.6l1.6-1.2,199,265-1.6,1.2Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M3700.54,344.887l0.92-1.773,318,166-0.92,1.773Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M3429.75,655.66l-1.5-1.319,273-311,1.5,1.32Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M4019.31,508.952l-0.62-1.9,489-157,0.62,1.9Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M4218.82,772.568l-1.64-1.135,290-421,1.64,1.134Z" transform="translate(-1977 -29)"/>
+    <path class="cls-3" d="M4506.63,352.929l0.74-1.858,327,130-0.74,1.859Z" transform="translate(-1977 -29)"/>
+  </g>
+</svg>
