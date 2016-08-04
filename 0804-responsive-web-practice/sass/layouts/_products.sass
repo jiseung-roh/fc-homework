@@ -93,11 +93,13 @@
 		flex: 1 0 auto
 		order: 2
 		+flex-container(column)
+
 		& > :nth-child(1)
 			order: 4
 			width: 100%
 			padding-bottom: 65%
 			background-color: $dark-gray
+			background:
 		& > :nth-child(3)
 			order: 2
 			width: 100%
@@ -181,6 +183,7 @@
 			background-color: $darkest-gray
 	+responsive($gb-screen)
 		+fluid-col(1, 4, $float: true)
+		margin-left: -1px
 		& > :nth-child(1)
 			+fluid-col(1, 1)
 			padding-bottom: 100%

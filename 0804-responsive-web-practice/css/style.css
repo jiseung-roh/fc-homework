@@ -644,6 +644,7 @@ nav.mb-hidden {
   .items-wrap-right {
     float: left;
     width: 25%;
+    margin-left: -1px;
   }
   .items-wrap-right > :nth-child(1) {
     width: 100%;
@@ -1104,6 +1105,7 @@ nav.mb-hidden {
   .items-wrap-right {
     float: left;
     width: 25%;
+    margin-left: -1px;
   }
   .items-wrap-right > :nth-child(1) {
     width: 100%;
