@@ -1,0 +1,38 @@
+// Default Settings && Common Modules
+html 
+	@extend %text-default
+	+responsive(768px)
+		font-size: 14px
+body
+	background-color: #efefef
+
+a
+	+reset-anchor
+	+hover-opacity
+
+ul
+	@extend %reset-list
+
+button
+	outline: none
+	cursor: pointer
+
+.wrap
+	+dimension(100%, auto)
+	background-color: $white
+	+responsive($lg-screen)
+		+dimension(1200px, auto, null, 0 auto)
+
+.container
+	+dimension(87.5%, auto, null, 0 auto)
+	+responsive($sm-screen)
+		+dimension(80%, auto, null, 0 auto)
+	+responsive($md-screen)
+		+dimension(80%, auto, null, 0 auto)
+	+responsive($lg-screen)
+		+dimension(1100px, auto, null, 0 auto)
+
+
+.readable-hidden
+	@extend %readable-hidden
+
