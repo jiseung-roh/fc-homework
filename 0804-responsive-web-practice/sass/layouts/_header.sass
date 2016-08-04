@@ -1,0 +1,115 @@
+// Page Header
+.pg-header
+	+dimension(100%, auto, 20px 0)
+	+responsive($gb-screen)
+		padding: 35px 0
+	.container
+		+flex-container(row, space-between)
+		+responsive($gb-screen)
+			display: block
+			&:after, &::after
+				content: ''
+				display: block
+				clear: both
+
+.brand
+	+responsive($gb-screen)
+		float: left
+	a
+		@extend %hit-area
+		height: 40px
+.brand-logo
+	display: inline-block
+	width: 40px
+	height: 40px
+
+.mb-menu
+	+flex-container(row, space-between)
+	width: 90px
+	&.dk-hidden
+		+responsive($gb-screen)
+			display: none
+	> *
+		@extend %hit-area
+		background:
+			position: center center
+			repeat: no-repeat
+	.mb-menu-basket
+		width: 40px
+		height: 40px
+		background:
+			size: 40% 40%
+			image: url("../asset/icon-basket.svg")
+	.mb-menu-button
+		width: 40px
+		height: 40px
+		background:
+			size: 100% 100%
+			image: url("../asset/icon-hamburger.svg")
+
+nav.mb-hidden
+	display: none
+	+responsive($gb-screen)
+		+flex-container(row, space-between)
+		float: right
+		width: 90%
+		height: 40px
+
+.gnb-menu
+	@extend %clearfix
+	float: left
+.gnb-item
+	line-height: 40px
+	+responsive($md-screen)
+		+horizontal-list(5px 5px, 20px, right)
+	+responsive($lg-screen)
+		+horizontal-list(10px 10px, 50px, right)
+
+.utility-menu
+	@extend %clearfix
+	float: right
+.utility-item
+	line-height: 40px
+	+responsive($md-screen)
+		+horizontal-list(5px 5px, 10px, right)
+		&:last-child
+			padding-right: 0
+	+responsive($lg-screen)
+		+horizontal-list(10px 10px, 20px, right)
+		&:last-child
+			padding-right: 0
+	&:nth-child(1):before, &:nth-child(1)::before
+		content: ''
+		display: inline-block
+		width: 1rem
+		height: 1rem
+		margin-right: .5rem
+		background:
+			image: url(../asset/icon-user.svg)
+			size: contain
+			position: center center
+			repeat: no-repeat
+	&:nth-child(2):before, &:nth-child(2)::before
+		content: ''
+		display: inline-block
+		width: 1rem
+		height: 1rem
+		margin-right: .7rem
+		background:
+			image: url(../asset/icon-basket.svg)
+			size: contain
+			position: center center
+			repeat: no-repeat
+	button
+		display: inline-block
+		width: 40px
+		height: 40px
+		vertical-align: middle
+		background:
+			image: url(../asset/icon-search.svg)
+			size: 100% 100%
+			position: center center
+		repeat: no-repeat
+		line-height: 50px
+		+responsive($lg-screen)
+			line-height: 60px

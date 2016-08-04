@@ -1,0 +1,33 @@
+.banner
+	+dimension(100%, auto)
+	text-align: center
+	.container
+		+dimension(100%, auto, 150px 15px)
+
+.banner-title
+	margin-bottom: 20px
+	font:
+		size: 46px
+		weight: 700px
+	text-transform: uppercase
+	line-height: normal
+	letter-spacing: .05em
+	color: $head-text-color
+
+.banner-description
+	margin-bottom: 60px
+	font: 
+		family: $font-family-head
+		style: italic
+
+.banner-button
+	display: none
+	+responsive($gb-screen)
+		display: inline-block
+		padding: 0 1rem
+		border: 1px solid $body-text-color
+		font-size: .875rem
+		text-transform: uppercase
+		letter-spacing: .03em
+		line-height: 40px
+		+push($body-text-color, $white, "to right")

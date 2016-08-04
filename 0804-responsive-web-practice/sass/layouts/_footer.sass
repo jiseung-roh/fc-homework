@@ -1,0 +1,63 @@
+.pg-footer
+	+dimension(100%, auto)
+	.container
+		@extend %clearfix
+		padding: 40px 0
+		+responsive($mb-screen)
+			border-top: 1px solid rgba($body-text-color, .1)
+
+.footer-menu
+	+responsive($mb-screen)
+		&:not(:last-child)
+			display: none
+		&:last-child
+			text-align: center
+		&:last-child > .footer-menu-title
+			font:
+				size: 24px
+				weight: 700
+			text-transform: uppercase
+			letter-spacing: .03em
+	+responsive($gb-screen)
+		display: block
+		+fluid-col(1, 4, 10px, $float: true)
+		height: 159px
+		padding-top: 8px
+		&:not(:first-child)
+			border-left: 1px solid rgba($body-text-color, .1)
+
+.footer-menu-title
+	margin-bottom: .5rem
+	color: $head-text-color
+
+.menu-item
+	display: block
+	font:
+		size: 12px
+	line-height: 24px
+	color: rgba($body-text-color, .7)
+
+.footer-address
+	font:
+		size: 12px
+		style: normal
+	color: rgba($body-text-color, .7)
+
+.footer-sns-group
+	margin-top: 3rem
+	+responsive($gb-screen)
+		margin-top: 1.5rem
+
+.sns-item
+	display: inline-block
+	width: 24px
+	height: 24px
+	margin-right: 5px
+	border: 1px solid $body-text-color
+	line-height: 24px
+	text-align: center
+	&:last-child
+		margin-right: 0
+	.fa.fa-instagram
+		position: relative
+		top: -1px

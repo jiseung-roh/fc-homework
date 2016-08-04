@@ -1,0 +1,195 @@
+.products
+	@extend %clearfix
+	.container
+		+flex-container(column)
+		+responsive($gb-screen)
+			display: block
+
+.products-items-title
+	margin-bottom: .3rem
+	font:
+		size: 24px
+		weight: 700
+	line-height: 1.125
+	text-transform: uppercase
+	color: $item-text-color
+	letter-spacing: .03em
+	+responsive($sm-screen)
+		font-size: 30px
+	+responsive($md-screen)
+		font-size: 18px
+	+responsive($lg-screen)
+		font-size: 24px
+
+.products-items-description
+	font:
+		family: $font-family-head
+		style: italic
+	color: $item-text-color
+	text-transform: uppercase
+
+.products-notifications, .products-null
+	display: none
+	+responsive($gb-screen)
+		display: block
+
+.notifications-wrap
+	display: none
+	+responsive($gb-screen)
+		display: block
+		position: absolute
+		width: 100%
+		+position-center-Y
+		padding:
+			left: 10px
+			right: 10px
+		.icon
+			display: inline-block
+			position: relative
+			&:before, &::before,
+			&:after, &::after
+				content: ''
+				position: absolute
+				top: 45%
+				width: 1.6rem
+				height: 1px
+				margin: 0 5px
+				background-color: $white
+			&:before, &::before
+				left: 100%
+			&:after, &::after
+				right: 100%
+		.fa
+			display: inline-block
+			font-size: 2rem
+			color: $white
+		.contents
+			margin-bottom: .6rem
+			font:
+				size: 12px
+				family: $font-family-head
+				style: italic
+			color: $item-text-color
+		.tag
+			font:
+				size: 12px
+			color: $item-text-color
+
+.products-item
+	+dimension(100%, 0)
+	position: relative
+	text-align: center
+	a
+		@extend %hit-area
+		+flex-container(column)
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+
+.items-wrap-left
+	+responsive($mb-screen)
+		width: 100%
+		flex: 1 0 auto
+		order: 2
+		+flex-container(column)
+		& > :nth-child(1)
+			order: 4
+			width: 100%
+			padding-bottom: 65%
+			background-color: $dark-gray
+		& > :nth-child(3)
+			order: 2
+			width: 100%
+			& > :nth-child(1)
+				width: 100%
+				padding-bottom: 43.003413%
+				background-color: $darker-gray
+		& > :nth-child(4)
+			order: 3
+			width: 100%
+			+flex-container(column)
+			& > :nth-child(2)
+				order: 2
+				width: 100%
+				padding-bottom: 43.003413%
+				background-color: $darkest-gray
+			& > :nth-child(3)
+				order: 1
+				width: 100%
+				padding-bottom: 65%
+				background-color: $dark-gray
+	+responsive($gb-screen)
+		+fluid-col(3, 4, $float: true)
+		& > :nth-child(1)
+			+fluid-col(1, 3, $float: true)
+			padding-bottom: 66.66666666%
+			background-color: $light-gray
+		& > :nth-child(2)
+			+fluid-col(2, 3, $float: true)
+			> *
+				display: block
+				+fluid-col(1, 2, $float: true)
+				padding-bottom: 50%
+			& > :nth-child(1)
+				background-color: $regular-gray
+			& > :nth-child(2)
+				background-color: $lightest-gray
+		& > :nth-child(3)
+			+fluid-col(2, 3, $float: true)
+			> *
+				display: block
+				+fluid-col(1, 2, $float: true)
+				padding-bottom: 50%
+			& > :nth-child(1)
+				background-color: $gray
+			& > :nth-child(2)
+				background-color: $regular-gray
+			&:after, &::after
+				content: ''
+				display: block
+				clear: left
+		& > :nth-child(4)
+			+fluid-col(3, 3, $float: true)
+			> *
+				display: block
+				+fluid-col(1, 3, $float: true)
+				padding-bottom: 33.33333333%
+			& > :nth-child(1)
+				background-color: $medium-gray
+			& > :nth-child(2)
+				background-color: $darkest-gray
+			& > :nth-child(3)
+				background-color: $muted-gray
+			&:after, &::after
+				content: ''
+				display: block
+				clear: left
+
+.items-wrap-right
+	+responsive($mb-screen)
+		width: 100%
+		flex: 1 0 auto
+		order: 1
+		& > :nth-child(1)
+			width: 100%
+			padding-bottom: 43.003413%
+			background-color: $darker-gray
+		& > :nth-child(2)
+			width: 100%
+			padding-bottom: 65%
+			background-color: $darkest-gray
+	+responsive($gb-screen)
+		+fluid-col(1, 4, $float: true)
+		& > :nth-child(1)
+			+fluid-col(1, 1)
+			padding-bottom: 100%
+			background-color: $darkest-gray
+		& > :nth-child(2)
+			+fluid-col(1, 1)
+			padding-bottom: 200%
+			background-color: $lighter-gray
+		&:after, &::after
+				content: ''
+				display: block
+				clear: left

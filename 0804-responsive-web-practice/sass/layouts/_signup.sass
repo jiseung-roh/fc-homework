@@ -1,0 +1,63 @@
+.sign-up
+	+dimension(100%, auto)
+	position: relative
+	text-align: center
+	.container
+		padding: 150px 15px
+
+.sign-up-title
+	margin-bottom: .5rem
+	font:
+		size: 24px
+		weight: 700
+	line-height: 1.125
+	text-transform: uppercase
+	color: $head-text-color
+	letter-spacing: .03em
+	+responsive($sm-screen)
+		font-size: 30px
+	+responsive($md-screen)
+		font-size: 32px
+	+responsive($lg-screen)
+		font-size: 36px
+
+.sign-up-description
+	margin-bottom: 40px
+	font: 
+		family: $font-family-head
+		style: italic
+
+.sign-up-form
+	@extend %clearfix
+	display: inline-block
+
+.sign-up-email
+	+dimension(70%, 40px, 10px 10px, 0 auto)
+	float: left
+	border: 1px solid $body-text-color
+	border-right-color: transparent
+	&[placeholder]
+		font:
+			size: 1rem
+			style: italic
+		color: $body-text-color
+		opacity: .9
+	+responsive($sm-screen)
+		width: 320px
+		height: 45px
+	+responsive($gb-screen)
+		width: 400px
+		height: 45px
+
+.sign-up-submit
+	+dimension(70px, 40px, 10px 10px, 0 auto)
+	float: left
+	border: none
+	color: $white
+	background-color: $orange
+	+responsive($sm-screen)
+		width: 80px
+		height: 45px
+	+responsive($gb-screen)
+		width: 80px
+		height: 45px
