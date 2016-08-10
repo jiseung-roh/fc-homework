@@ -1,0 +1,80 @@
+.gnb
+	+responsive($xs-screen, $lg-screen)
+		background-color: $black
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 100%
+		overflow: hidden
+		+transition
+	+responsive($lg-screen)
+		+dimension(min calc(100vh - 120px), 103px)
+		+flex-container(row, flex-end)
+		position: absolute
+		top: 346px
+		left: -227px
+		transform: rotate(-90deg)
+		border-bottom: 1px solid rgba($gray, .5)
+
+#gnb:target
+	+responsive($xs-screen, $lg-screen)
+		bottom: 0
+
+.gnb-header
+	+responsive($xs-screen, $lg-screen)
+		+dimension(100%, 120px, 0 45px)
+		+flex-container(row, space-between)
+		border-bottom: 1px solid rgba($gray, .8)
+	+responsive($lg-screen)
+		display: none
+
+.gnb-logo
+	+dimension(58px, auto)
+
+.close-gnb
+	+dimension(1rem, 1rem)
+	display: inline-block
+	background:
+		image: url(../asset/icon-close.png)
+		size: contain
+		repeat: no-repeat
+		position: center center
+
+
+.gnb-items
+	+responsive($xs-screen, $lg-screen)
+		+dimension(100%, auto)
+	+responsive($lg-screen)
+		height: 103px
+		padding-right: 40px
+		&::after
+			content: ''
+			display: block
+			clear: left
+
+.gnb-item
+	+reset-anchor
+	display: block
+	font:
+		size: 13px
+		weight: 600
+	text-transform: uppercase
+	+responsive($xs-screen, $lg-screen)
+		+dimension(100%, auto, 40px 45px)
+		+hover-opacity(.7, 1)
+		border-bottom: 1px solid rgba($gray, .5)
+		color: $white
+		// background-color: $black
+		&:first-child
+			+hover-opacity(1, .7)
+	+responsive($lg-screen)
+		+hover-line("to right", $black, 4px)
+		float: left
+		padding: 0 5px
+		margin-right: 30px
+		text-align: uppercase
+		color: $black
+		line-height: 103px
+		&:last-child
+			margin-right: 0

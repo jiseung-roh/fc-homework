@@ -1,0 +1,56 @@
+.pg-header
+	+dimension(100%, 120px, 0 45px)
+	+flex-container(row, space-between)
+	border-bottom: 1px solid rgba($gray, .5)
+
+.brand
+	+flex-container(row, space-between)
+	.brand-logo
+		+dimension(58px, auto)
+		margin-right: 30px
+	.brand-slogan
+		+responsive($xs-screen, $sm-screen)
+			display: none
+		+responsive($sm-screen)
+			+dimension(116px, auto)
+			display: inline-block
+
+.trigger-gnb
+	+dimension(1rem, 1rem)
+	display: inline-block
+	background:
+		image: url(../asset/icon-menu.svg)
+		size: contain
+		repeat: no-repeat
+		position: center center
+	+responsive($lg-screen)
+		display: none
+
+.utility-group
+	+responsive($xs-screen, $lg-screen)
+		display: none
+	+responsive($lg-screen)
+		+flex-container(row, center)
+		& > [class*="-trigger"]
+			display: inline-block
+			width: 1rem
+			height: 1rem
+			background:
+				size: contain
+				repeat: no-repeat
+				position: center center
+		.utility-search
+			display: none
+			border-bottom: 1px solid rgba($gray, .5)
+			margin-right: 10px
+			outline: none
+		.utility-search-trigger
+			background-image: url(../asset/icon-search.png)
+			order: 2
+			margin-right: 10px
+		.utility-cart-trigger
+			background-image: url(../asset/icon-cart.png)
+			order: 3
+
+#search:target
+	display: inline-block
