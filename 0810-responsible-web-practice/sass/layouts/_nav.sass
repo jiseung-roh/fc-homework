@@ -1,4 +1,6 @@
 .gnb
+	position: relative
+	z-index: 10
 	+responsive($xs-screen, $lg-screen)
 		background-color: $black
 		position: absolute
@@ -9,11 +11,10 @@
 		overflow: hidden
 		+transition
 	+responsive($lg-screen)
-		+dimension(min calc(100vh - 120px), 103px)
 		+flex-container(row, flex-end)
+		height: 103px
 		position: absolute
-		top: 346px
-		left: -227px
+		transform-origin: bottom right
 		transform: rotate(-90deg)
 		border-bottom: 1px solid rgba($gray, .5)
 

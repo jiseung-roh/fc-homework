@@ -1,10 +1,16 @@
 .pg-header
 	+dimension(100%, 120px, 0 45px)
+	+responsive($xs-screen, $sm-screen)
+		padding: 0 20px
 	+flex-container(row, space-between)
 	border-bottom: 1px solid rgba($gray, .5)
 
 .brand
 	+flex-container(row, space-between)
+	a
+		@extend %hit-area
+		+reset-anchor
+		+hover-opacity
 	.brand-logo
 		+dimension(58px, auto)
 		margin-right: 30px
@@ -17,6 +23,7 @@
 
 .trigger-gnb
 	+dimension(1rem, 1rem)
+	+hover-opacity
 	display: inline-block
 	background:
 		image: url(../asset/icon-menu.svg)
